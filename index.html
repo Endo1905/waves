@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root 
+        {
+            --ciemny: #635bff;
+            --jasny: #80e9ff;
+        }
+
+        svg 
+        {
+            cursor: pointer;
+        }
+
+        #darkGroup
+        {
+            fill: var(--ciemny);
+        }
+        
+        #lightGroup
+        {
+            fill: var(--jasny);
+        }
+
+        #dark1, #dark2, #light1
+        {
+            transition: all 1s ease;
+        }
+
+        #dark2
+        {
+            transform: translateX(-100%);
+        }
+
+        svg:hover #light1
+        {
+            transform: translateX(20%);
+        }
+        
+        svg:hover #dark1
+        {
+            transform: translateX(40%);
+            opacity: 0;
+        }
+        
+        svg:hover #dark2
+        {
+            transform: translateX(0%);
+        }
+    </style>
+</head>
+<body>
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="triangle" clip-path="url(#clip0_1_2)">
+            <g id="lightGroup">
+                <path id="light1" opacity="0.7" d="M38 62.5L5.75 81.1195L5.75 43.8805L38 62.5Z"/>
+            </g>
+            <g id="darkGroup">
+                <path id="dark1" opacity="0.7" d="M49 62.5L16.75 81.1195L16.75 43.8805L49 62.5Z"/>
+                <path id="dark2" opacity="0.7" d="M38 62.5L5.75 81.1195L5.75 43.8805L38 62.5Z"/>
+            </g>
+        </g>
+        <defs>
+            <clipPath id="clip0_1_2">
+                <rect width="120" height="120" fill="white"/>
+            </clipPath>
+        </defs>
+    </svg>
+    
+    <script>
+        const svg = document.getElementById("triangle");
+        
+        svg.onclick = (e) => 
+        {
+            const colors = ['red','blue','green','orange','pink','purple'];
+            const random = () => colors[Math.floor(Math.random()*colors.length)];
+
+            document.documentElement.style.cssText = 
+            `
+            --ciemny: ${random()};
+            --jasny: ${random()};
+            `;
+        }
+
+
+    </script>
+
+
+</body>
+</html>

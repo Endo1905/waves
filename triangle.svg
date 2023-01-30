@@ -1,0 +1,16 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="triangle" clip-path="url(#clip0_1_2)">
+        <g id="lightGroup">
+            <path id="light1" opacity="0.7" d="M38 62.5L5.75 81.1195L5.75 43.8805L38 62.5Z" fill="#07FFF0"/>
+        </g>
+        <g id="darkGroup">
+            <path id="dark1" opacity="0.7" d="M49 62.5L16.75 81.1195L16.75 43.8805L49 62.5Z" fill="#0000FF"/>
+            <path id="dark2" opacity="0.7" d="M38 62.5L5.75 81.1195L5.75 43.8805L38 62.5Z" fill="#0000FF"/>
+        </g>
+    </g>
+    <defs>
+        <clipPath id="clip0_1_2">
+            <rect width="120" height="120" fill="white"/>
+        </clipPath>
+    </defs>
+</svg>
